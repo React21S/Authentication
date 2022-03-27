@@ -11,9 +11,13 @@ const Home = () => {
     // for individual user
     const {user}=useAuthContext()
     const {documents, error}=useCollection(
+        // for handle the fetching from useCollection 
         'NPS',
-        // For handle separate users
-        ["uid", "==", user.uid]
+        // For handle separate users by query the user from useCollection
+        ["uid", "==", user.uid],
+
+        // For handle orderBy method either ascending or descending order
+        ["createdAt", "desc"]
     
     )
     return (
