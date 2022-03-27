@@ -15,6 +15,7 @@ const Home = () => {
         'NPS',
         // For handle separate users by query the user from useCollection
         ["uid", "==", user.uid],
+        // null,
 
         // For handle orderBy method either ascending or descending order
         ["createdAt", "desc"]

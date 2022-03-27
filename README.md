@@ -48,4 +48,34 @@ after press enter
     - follow by press enter
 
 
+### change the firebase rule
+```shell
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /NPS/{document=**} {
+      // //for allowing full access just write this 
+      //  allow read, write, update, delete, create;
+      // allow read, write; 
+      // if
+      //     request.time < timestamp.date(2022, 4, 24);
+
+    //rule to allow create 
+    // must be authenticated to create
+      allow create: if request.auth != null;
+    
+    // for allowing the user to read and delete 
+    // logged in user uid must match the document creator to read & delete
+      allow read, delete: if request.auth.uid == resource.data.uid;
+    }
+  }
+}
+```
+
+### For deploying Firebase rules
+- only desire file
+```shell
+firebase deploy --only firestore
+```
+
 
