@@ -15,9 +15,9 @@ const firebaseConfig = {
   firebase.initializeApp(firebaseConfig)
 
   // init service
-  const projectFirebase = firebase.firestore()
+  const projectFirestore= firebase.firestore()
   const projectAuth = firebase.auth()
 // timestamp
   const timestamp = firebase.firestore.Timestamp
 
-  export{projectFirebase, projectAuth, timestamp}
+  export{projectFirestore, projectAuth, timestamp}

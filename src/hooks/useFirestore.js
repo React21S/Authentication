@@ -22,7 +22,7 @@ const firestoreReducer = (state, action) => {
 }
 
 
-const useFiresore = (collection) => {
+const useFirestore = (collection) => {
   const [response, dispatch] = useReducer(firestoreReducer, initialState)
   const [isCancelled, setIsCancelled] = useState(false)
 
@@ -37,9 +37,11 @@ const useFiresore = (collection) => {
   }
 
   // add a document
-  const addDocument = async (doc) => {
+const addDocument = async (doc) => {
     dispatch({type:'IS_PENDING'});
     try{
+
+      // Timestamp
       const createdAt = timestamp.fromDate(new Date())
       const addedDocument = await ref.add({...doc, createdAt});
       dispatchIfNotCancelled({type: 'ADDED_DOCUMENT', payload:addedDocument})
@@ -60,4 +62,5 @@ const useFiresore = (collection) => {
 
   return { addDocument, deleteDocument, response }
 };
-  export default useFiresore;
+
+export default useFirestore;
