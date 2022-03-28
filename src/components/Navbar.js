@@ -11,7 +11,7 @@ const Navbar = () => {
     return (
         <nav className={styles.navbar}>
             <ul>
-                <li className={styles.title}><Link to="/">HAPPY Software</Link></li>
+                <li className={styles.title}><Link to="/">MoySemTol Software</Link></li>
                 {!user && (
                 <>
                 <li><Link to="login">Login</Link></li>
