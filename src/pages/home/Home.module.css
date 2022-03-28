@@ -73,7 +73,7 @@
   color: #777;
   font-size: 1.4em;
 }
-.NPSList .amount {
+.NPSList .amount, .NPSList .quantity {
   margin-left: auto;
   margin-right: 40px;
   color: #777;

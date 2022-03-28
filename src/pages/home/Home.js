@@ -24,7 +24,7 @@ const Home = () => {
     return (
         <div className={styles.container}>
             <div className={styles.content}>
-                Information about Net promoter score
+                Information about Your Demand
                 {error && <p>{error}</p>}
                 {/* To get the list of the NPS inserted from database*/}
                 {documents && <NPSList NPScores={documents} />}

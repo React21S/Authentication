@@ -13,7 +13,8 @@ const NPSList = ({NPScores}) => {
         <ul className={styles.NPSList}>
         {NPScores.map((NPScore) => (
           <li key={NPScore.id}>
-            <p className={styles.name}>{NPScore.name}</p>
+            <p className={styles.name}> Name: {NPScore.name}</p>
+            <p className={styles.amount}> Quantity: {NPScore.quantity}</p>
             <p className={styles.amount}>€ {NPScore.amount}</p>
             <button onClick={()=>deleteDocument(NPScore.id)}>X</button>
           </li>

@@ -9,7 +9,8 @@ const SurveyOutcome = ({uid}) => {
 
     const [name, setName] = useState("")
     const [amount, setAmount] = useState("")
-    const {addDocument,deleteDocument, response }=useFirestore('NPS')
+    const [quantity, setQuantity] = useState("")
+    const {addDocument, response }=useFirestore('NPS')
 
     const handleSubmit = (e) => {
       e.preventDefault()
@@ -18,7 +19,8 @@ const SurveyOutcome = ({uid}) => {
         // uid:uid
         uid,
         name,
-        amount
+        amount,
+        quantity
       })
     }
 
@@ -27,6 +29,7 @@ const SurveyOutcome = ({uid}) => {
       if(response.success){
         setName('')
         setAmount('')
+        setQuantity('')
       }
     }, [response.success]);
 
@@ -43,7 +46,7 @@ const SurveyOutcome = ({uid}) => {
       <>
 
       
-        <h3>Net Promoter Score</h3>
+        <h3>Enter Your Demand</h3>
         <form onSubmit={handleSubmit}>
           {/* <label>
             <span>Id:</span>
@@ -61,6 +64,15 @@ const SurveyOutcome = ({uid}) => {
              value={name}
               required
               onChange={(e)=>setName(e.target.value)} 
+            />
+          </label>
+          <label>
+            <span>Quantity:</span>
+            <input
+              type="number"
+              value={quantity}
+              required
+              onChange={(e)=>setQuantity(e.target.value)} 
             />
           </label>
           <label>
@@ -93,7 +105,7 @@ const SurveyOutcome = ({uid}) => {
           
            */}
 
-          <button className="btn">Add Transaction</button>
+          <button className="btn">Save Your Demand</button>
         </form>
       </>
     )

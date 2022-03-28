@@ -1,3 +1,17 @@
+# Authentication App
+- This is an authentication app built with react context management with firebase for deployment.
+
+## SignUp page
+
+Users can signup with their name, email, password and get access to enter data. Each user has their login page, where the user cannot see what is going on on another user's page.
+
+![SignUp](/img/SignUp.png)
+
+---
+
+## Login page
+
+![Login](/img/Login.png)
 ## Installation 
 
 ```shell
