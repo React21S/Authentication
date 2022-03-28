@@ -79,3 +79,16 @@ firebase deploy --only firestore
 ```
 
 
+## Deployment through firebase
+
+```shell
+npm run build
+```
+```shell
+firebase deploy
+```
+
+## Web for this package
+- https://npscore-72b0f.web.app/
+
+
