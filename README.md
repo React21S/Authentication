@@ -3,7 +3,7 @@
 
 ## SignUp page
 
-Users can signup with their name, email, password and get access to enter data. Each user has their login page, where the user cannot see what is going on on another user's page.
+- Users can signup with their name, email, password and get access to enter data. Each user has their login page, where the user cannot see what is going on on another user's page.
 
 ![SignUp](/img/SignUp.png)
 
@@ -11,7 +11,17 @@ Users can signup with their name, email, password and get access to enter data. 
 
 ## Login page
 
+- For the user to log in, it requires the user's email and password used initially for signing up for an account.
+After logging in, user can view their page for all necessary information previously inserted.
+
 ![Login](/img/Login.png)
+
+---
+## User's page
+- After logging in, user can view their page for all necessary information previously inserted. Users can enter a new item and delete the item from their page.
+
+![LoginPage](/img/LoginPage.png)
+
 ## Installation 
 
 ```shell
@@ -20,6 +30,7 @@ npm install react-router-dom
 ```shell
 npm install firebase
 ```
+---
 
 ## Needed firestore query 
  [data query](https://firebase.google.com/docs/firestore/query-data/queries)
@@ -85,13 +96,13 @@ service cloud.firestore {
   }
 }
 ```
-
+---
 ### For deploying Firebase rules
 - only desire file
 ```shell
 firebase deploy --only firestore
 ```
-
+---
 
 ## Deployment through firebase
 
@@ -105,4 +116,6 @@ firebase deploy
 ## Web for this package
 - https://npscore-72b0f.web.app/
 
-
+---
+# Acknowledgement 
+- Context, Hooks, Reducers, Routing, Auth, Databases. By Net Ninja (INSTRUCTOR)
