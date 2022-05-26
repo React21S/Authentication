@@ -1,5 +1,5 @@
 import React, { createContext, useReducer, useEffect } from "react";
-import { projectAuth } from "../firebase/config";
+// import { projectAuth } from "../firebase/config";
 
 export const AuthContext = createContext();
 
@@ -25,13 +25,13 @@ export const AuthContextProvider = ({children}) => {
 
     useEffect(()=>{
         // to make loading once
-        const once = projectAuth.onAuthStateChanged((user)=>{
-            dispatch({type: 'AUTH_READY', payload:user});
-            once()
-        })
+        // const once = projectAuth.onAuthStateChanged((user)=>{
+            dispatch({type: 'AUTH_READY', });
+            // once()
+        // })
     }, []);
 
-    console.log('AuthContext state:', state)
+    // console.log('AuthContext state:', state)
 
     return (
         <AuthContext.Provider value={{...state, dispatch}}>
